@@ -1,5 +1,5 @@
 use crate::model::PriceInfo;
-use crate::provider::{ get_price_provider, PriceProvider };
+use crate::provider::get_price_provider;
 use crate::Result;
 use crate::config::coins::{ read_default_coins_config, CoinsData };
 

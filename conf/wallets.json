@@ -3,7 +3,7 @@
         {
             "name": "Poloniex",
             "kind": "Poloniex",
-            "address": "Poloniex",
+            "address": "poloniex-address",
             "holdings": [
                 { "coin": "OM", "amount": 799 }
             ]
@@ -19,22 +19,45 @@
                 { "coin": "USDC", "amount": 336.94 },
                 { "coin": "MKR", "amount": 0.07 },
                 { "coin": "PRQ", "amount": 340 },
-                { "coin": "AMPL", "amount": 500 }
+                { "coin": "AMPL", "amount": 500 },
+                { "coin": "DAI", "amount": 19.5 },
+                { "coin": "USDC", "amount": 336.94715 },
+                { "coin": "API3", "amount": 50.99928 },
+                { "coin": "PHA", "amount": 596.54321 }         
             ]
         },
         {
             "name": "Ethereum MetaMask 2",
-            "kind": "Ethereum MetaMask 2",
+            "kind": "Metamask",
             "address": "Ethereum MetaMask 2",
             "holdings": [
                 { "coin": "ETH", "amount": 0.132 },
                 { "coin": "WBTC", "amount": 0.00176 },
-                { "coin": "FORTH", "amount": 22.4 }
+                { "coin": "FORTH", "amount": 22.4 },
+                { "coin": "DAI", "amount": 19.5 }
+            ]
+        },
+        {
+            "name": "Ethereum MetaMask 2 - Arbitrum",
+            "kind": "Metamask",
+            "address": "Ethereum MetaMask 2 - Arbitrum",
+            "holdings": [
+                { "coin": "ETH", "amount": 0.218493 }
+            ]
+        },
+        {
+            "name": "Ethereum MetaMask 3 - BNB",
+            "kind": "Metamask",
+            "address": "Ethereum MetaMask 3 - BNB",
+            "holdings": [
+                { "coin": "ALU", "amount": 1036.18605 },
+                { "coin": "BNB", "amount": 0.1065 },
+                { "coin": "USDC", "amount": 57.40877 }
             ]
         },
         {
             "name": "ADA Yoroi",
-            "kind": "ADA Yoroi",
+            "kind": "ADA",
             "address": "ADA Yoroi",
             "holdings": [
                 { "coin": "ADA", "amount": 8936 }
@@ -42,7 +65,7 @@
         },
         {
             "name": "Tron Wallet",
-            "kind": "Tron Wallet",
+            "kind": "Tron",
             "address": "Tron Wallet",
             "holdings": [
                 { "coin": "TRX", "amount": 17691 }
@@ -50,7 +73,7 @@
         },
         {
             "name": "AVAX Wallet",
-            "kind": "AVAX Wallet",
+            "kind": "Avax",
             "address": "AVAX Wallet",
             "holdings": [
                 { "coin": "AVAX", "amount": 33.0882 }
@@ -74,7 +97,7 @@
         },
         {
             "name": "Ledger ETH 1",
-            "kind": "Ledger ETH 1",
+            "kind": "Ledger",
             "address": "Ledger ETH 1",
             "holdings": [
                 { "coin": "ETH", "amount": 3.35779 }
@@ -82,7 +105,7 @@
         },
         {
             "name": "Ledger ETH 2",
-            "kind": "Ledger ETH 2",
+            "kind": "Ledger",
             "address": "Ledger ETH 2",
             "holdings": [
                 { "coin": "ETH", "amount": 5.080709 }
@@ -90,7 +113,7 @@
         },
         {
             "name": "Ledger ETH 3",
-            "kind": "Ledger ETH 3",
+            "kind": "Ledger",
             "address": "Ledger ETH 3",
             "holdings": [
                 { "coin": "ETH", "amount": 5.080709 }

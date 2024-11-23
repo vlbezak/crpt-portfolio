@@ -1,16 +1,21 @@
-pub mod holdings;
-pub mod coin_info_config;
 
-use crate::Result;
+use std::str::FromStr;
 
-#[derive(Debug, PartialEq)]
+use clap::ValueEnum;
+
+//use core::Result;
+
+#[derive(Debug, PartialEq, Clone, ValueEnum)]
 pub enum Currency {
     EUR,
     USD
 }
 
-impl Currency {
-    pub fn from(val: &str) -> Result<Self> {
+impl FromStr for Currency {
+
+    type Err = String;
+
+    fn from_str(val: &str) -> Result<Self, Self::Err> {
         match val {
         "eur" | "EUR" => Ok(Currency::EUR),
         "usd" | "USD" => Ok(Currency::USD),

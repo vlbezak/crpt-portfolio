@@ -47,6 +47,10 @@
         { "code": "EOS", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" },
         { "code": "LEO", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" },
         { "code": "MATIC", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" },
+        { "code": "PHA", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" },
+        { "code": "API3", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" },
+        { "code": "ALU", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" },
+        { "code": "BNB", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" },
         { "code": "POL", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" }
     ]
 }
