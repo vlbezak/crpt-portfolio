@@ -1,0 +1,209 @@
+{
+    "wallets": [
+        {
+            "name": "Poloniex",
+            "kind": "Poloniex",
+            "address": "Poloniex",
+            "holdings": [
+                { "coin": "OM", "amount": 799 }
+            ]
+        },
+        {
+            "name": "Ethereum MetaMask 1",
+            "kind": "Ethereum MetaMask 1",
+            "address": "Ethereum MetaMask 1",
+            "holdings": [
+                { "coin": "TRAC", "amount": 831.733 },
+                { "coin": "FORTH", "amount": 321.87 },
+                { "coin": "ETH", "amount": 0.7846 },
+                { "coin": "USDC", "amount": 336.94 },
+                { "coin": "MKR", "amount": 0.07 },
+                { "coin": "PRQ", "amount": 340 },
+                { "coin": "AMPL", "amount": 500 }
+            ]
+        },
+        {
+            "name": "Ethereum MetaMask 2",
+            "kind": "Ethereum MetaMask 2",
+            "address": "Ethereum MetaMask 2",
+            "holdings": [
+                { "coin": "ETH", "amount": 0.132 },
+                { "coin": "WBTC", "amount": 0.00176 },
+                { "coin": "FORTH", "amount": 22.4 }
+            ]
+        },
+        {
+            "name": "ADA Yoroi",
+            "kind": "ADA Yoroi",
+            "address": "ADA Yoroi",
+            "holdings": [
+                { "coin": "ADA", "amount": 8936 }
+            ]
+        },
+        {
+            "name": "Tron Wallet",
+            "kind": "Tron Wallet",
+            "address": "Tron Wallet",
+            "holdings": [
+                { "coin": "TRX", "amount": 17691 }
+            ]
+        },
+        {
+            "name": "AVAX Wallet",
+            "kind": "AVAX Wallet",
+            "address": "AVAX Wallet",
+            "holdings": [
+                { "coin": "AVAX", "amount": 33.0882 }
+            ]
+        },
+        {
+            "name": "Ledger",
+            "kind": "Ledger",
+            "address": "Ledger",
+            "holdings": [
+                { "coin": "XRP", "amount": 20938 },
+                { "coin": "BTC", "amount": 0.515727 },
+                { "coin": "USDT", "amount": 4096.45 },
+                { "coin": "LINK", "amount": 129.679 },
+                { "coin": "ATOM", "amount": 214.688 },
+                { "coin": "LTC", "amount": 13.39 },
+                { "coin": "DOGE", "amount": 1995 },
+                { "coin": "XLM", "amount": 1799.99 },
+                { "coin": "ETC", "amount": 6.5728 }
+            ]
+        },
+        {
+            "name": "Ledger ETH 1",
+            "kind": "Ledger ETH 1",
+            "address": "Ledger ETH 1",
+            "holdings": [
+                { "coin": "ETH", "amount": 3.35779 }
+            ]
+        },
+        {
+            "name": "Ledger ETH 2",
+            "kind": "Ledger ETH 2",
+            "address": "Ledger ETH 2",
+            "holdings": [
+                { "coin": "ETH", "amount": 5.080709 }
+            ]
+        },
+        {
+            "name": "Ledger ETH 3",
+            "kind": "Ledger ETH 3",
+            "address": "Ledger ETH 3",
+            "holdings": [
+                { "coin": "ETH", "amount": 5.080709 }
+            ]
+        },
+        {
+            "name": "Kusama",
+            "kind": "Kusama",
+            "address": "Kusama",
+            "holdings": [
+                { "coin": "KSM", "amount": 101 }
+            ]
+        },
+        {
+            "name": "Acala",
+            "kind": "Acala",
+            "address": "Acala",
+            "holdings": [
+                { "coin": "DOT", "amount": 727 }
+            ]
+        },
+        {
+            "name": "DOT Staking",
+            "kind": "DOT Staking",
+            "address": "DOT Staking",
+            "holdings": [
+                { "coin": "DOT", "amount": 508 }
+            ]
+        },
+        {
+            "name": "Kepler",
+            "kind": "Kepler",
+            "address": "Kepler",
+            "holdings": [
+                { "coin": "KAVA", "amount": 1000 }
+            ]
+        },
+        {
+            "name": "Kepler Kava",
+            "kind": "Kepler Kava",
+            "address": "Kepler Kava",
+            "holdings": [
+                { "coin": "SAGA", "amount": 200 }
+            ]
+        },
+        {
+            "name": "Kepler Inj",
+            "kind": "Kepler Inj",
+            "address": "Kepler Inj",
+            "holdings": [
+                { "coin": "INJ", "amount": 27.5 }
+            ]
+        },
+        {
+            "name": "Kraken",
+            "kind": "Kraken",
+            "address": "Kraken",
+            "holdings": [
+                { "coin": "SOL", "amount": 11.5 },
+                { "coin": "BTC", "amount": 0.01339 },
+                { "coin": "POL", "amount": 1640.037 },
+                { "coin": "ETH", "amount": 0.19981 },
+                { "coin": "USDT", "amount": 957.964 },
+                { "coin": "DAI", "amount": 100 },
+                { "coin": "XTZ", "amount": 573.24 },
+                { "coin": "XMR", "amount": 3.08015 },
+                { "coin": "NEAR", "amount": 54 },
+                { "coin": "GRT", "amount": 1144.37382 },
+                { "coin": "LTC", "amount": 2 },
+                { "coin": "ETC", "amount": 2.6 },
+                { "coin": "OCEAN", "amount": 120 },
+                { "coin": "TRX", "amount": 206 }
+            ]
+        },
+        {
+            "name": "Binance",
+            "kind": "Binance",
+            "address": "Binance",
+            "holdings": [
+                { "coin": "RUNE", "amount": 172.786 },
+                { "coin": "AAVE", "amount": 2.379 },
+                { "coin": "UNI", "amount": 57.929091 },
+                { "coin": "FET", "amount": 173.1171 },
+                { "coin": "EGLD", "amount": 3.996 },
+                { "coin": "XNO", "amount": 97.62 },
+                { "coin": "NEO", "amount": 5.81418 },
+                { "coin": "RLC", "amount": 40.665 },
+                { "coin": "BAND", "amount": 41.334 },
+                { "coin": "YFI", "amount": 0.00791208 }
+            ]
+        },
+        {
+            "name": "Bitfinex",
+            "kind": "Bitfinex",
+            "address": "Bitfinex",
+            "holdings": [
+                { "coin": "AVAX", "amount": 1.49 },
+                { "coin": "BCHN", "amount": 1.21 },
+                { "coin": "EGLD", "amount": 0.25 },
+                { "coin": "EOS", "amount": 7.4 },
+                { "coin": "TRX", "amount": 547.5 },
+                { "coin": "LEO", "amount": 5.99 }
+            ]
+        },
+        {
+            "name": "Coinbase",
+            "kind": "Coinbase",
+            "address": "Coinbase",
+            "holdings": [
+                { "coin": "BTC", "amount": 0.05684 },
+                { "coin": "ETH", "amount": 0.8494 },
+                { "coin": "XLM", "amount": 31.33 }
+            ]
+        }
+    ]
+}

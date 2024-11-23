@@ -1,0 +1,8 @@
+{
+    "providers" : [
+        {
+            "name": "CoinApi",
+            "apiKey": "COINAPI_API_KEY"
+        }
+    ]
+}

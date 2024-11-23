@@ -1,0 +1,14 @@
+[package]
+name = "portfolio"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+derive_more = {version = "1.0.0", features = ["from"]}
+reqwest = { version = "0.12.9", features = ["json"]}
+dotenv = { version = "0.15"}
+tokio = { version ="1.41.1",  features = ["full"]}
+serde = { version = "1.0", features = ["derive"]}
+serde_json = { version = "1.0" }
+async-trait = "0.1"
+

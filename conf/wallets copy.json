@@ -1,0 +1,65 @@
+{
+    "wallets": [
+        {
+            "name": "Metamask ETH 1",
+            "kind": "Metamask",
+            "address": "xxxxxxxx",
+            "holdings": [
+                { "coin": "ETH", "amount": 0.7846},
+                { "coin": "TRAC", "amount": 831.733},
+                { "coin": "FORTH", "amount": 321.87}
+            ]
+        },
+        {
+            "name": "Ledger",
+            "kind": "Ledger",
+            "address": "xrp",
+            "holdings": [
+                { "coin": "XRP", "amount": 20.9392}
+            ]
+        },
+        {
+            "name": "Ledger",
+            "kind": "Ledger",
+            "address": "cosmos",
+            "holdings": [
+                { "coin": "ATOM", "amount": 214.688}
+            ]
+        },
+        {
+            "name": "Ledger",
+            "kind": "Ledger",
+            "address": "btc",
+            "holdings": [
+                { "coin": "BTC", "amount": 0.515727}
+            ]
+        },
+        {
+            "name": "Ledger",
+            "kind": "Ledger",
+            "address": "normal-eth",
+            "holdings": [
+                { "coin": "ETH", "amount": 3.3422303}
+            ]
+        },
+        {
+            "name": "Ledger",
+            "kind": "Ledger",
+            "address": "staking-eth-lido",
+            "holdings": [
+                { "coin": "ETH", "amount": 5.08709}
+            ]
+        },
+        {
+            "name": "Ledger",
+            "kind": "Ledger",
+            "address": "staking-eth-kiln",
+            "holdings": [
+                { "coin": "ETH", "amount": 5.08709}
+            ]
+        }
+
+
+
+    ]
+  }

@@ -1,0 +1,90 @@
+{
+  "holdings": [
+    {
+      "wallet": { "name": "Poloniex" },
+      "coin": "OM",
+      "amount": 799
+    },
+    
+    { "wallet": { "name": "Ethereum MetaMask 1" }, "coin": "TRAC", "amount": 831.733 },
+    { "wallet": { "name": "Ethereum MetaMask 1" }, "coin": "FORTH", "amount": 321.87 },
+    { "wallet": { "name": "Ethereum MetaMask 1" }, "coin": "ETH", "amount": 0.7846 },
+    { "wallet": { "name": "Ethereum MetaMask 1" }, "coin": "USDC", "amount": 336.94 },
+    { "wallet": { "name": "Ethereum MetaMask 1" }, "coin": "MKR", "amount": 0.07 },
+    { "wallet": { "name": "Ethereum MetaMask 1" }, "coin": "PRQ", "amount": 340 },
+    { "wallet": { "name": "Ethereum MetaMask 1" }, "coin": "AMPL", "amount": 500 },
+
+    { "wallet": { "name": "Ethereum MetaMask 2" }, "coin": "ETH", "amount": 0.132 },
+    { "wallet": { "name": "Ethereum MetaMask 2" }, "coin": "WBTC", "amount": 0.00176 },
+    { "wallet": { "name": "Ethereum MetaMask 2" }, "coin": "FORTH", "amount": 22.4 },
+
+    { "wallet": { "name": "ADA Yoroi" }, "coin": "ADA", "amount": 8936 },
+
+    { "wallet": { "name": "Tron Wallet" }, "coin": "TRX", "amount": 17691 },
+    
+    { "wallet": { "name": "AVAX Wallet" }, "coin": "AVAX", "amount": 33.0882 },
+
+
+    { "wallet": { "name": "Ledger" }, "coin": "XRP", "amount": 20938 },
+    { "wallet": { "name": "Ledger" }, "coin": "BTC", "amount": 0.515727 },
+    { "wallet": { "name": "Ledger ETH 1" }, "coin": "ETH", "amount": 3.35779 },
+    { "wallet": { "name": "Ledger ETH 2" }, "coin": "ETH", "amount": 5.080709 },
+    { "wallet": { "name": "Ledger ETH 3" }, "coin": "ETH", "amount": 5.080709 },
+    { "wallet": { "name": "Ledger" }, "coin": "USDT", "amount": 4096.45 },
+    { "wallet": { "name": "Ledger" }, "coin": "LINK", "amount": 129.679 },
+    { "wallet": { "name": "Ledger" }, "coin": "ATOM", "amount": 214.688 },
+    { "wallet": { "name": "Ledger" }, "coin": "LTC", "amount": 13.39 },
+    { "wallet": { "name": "Ledger" }, "coin": "DOGE", "amount": 1995 },
+    { "wallet": { "name": "Ledger" }, "coin": "XLM", "amount": 1799.99 },
+    { "wallet": { "name": "Ledger" }, "coin": "ETC", "amount": 6.5728 },
+
+    { "wallet": { "name": "Kusama" }, "coin": "KSM", "amount": 101 },
+    { "wallet": { "name": "Acala" }, "coin": "DOT", "amount": 727 },
+    { "wallet": { "name": "DOT Staking" }, "coin": "DOT", "amount": 508 },
+    
+    { "wallet": { "name": "Kepler" }, "coin": "KAVA", "amount": 1000 },
+    { "wallet": { "name": "Kepler Kava" }, "coin": "SAGA", "amount": 200 },
+    { "wallet": { "name": "Kepler Inj" }, "coin": "INJ", "amount": 27.5 },
+
+    { "wallet": { "name": "Kraken" }, "coin": "SOL", "amount": 11.5 },
+    { "wallet": { "name": "Kraken" }, "coin": "BTC", "amount": 0.01339 },
+    { "wallet": { "name": "Kraken" }, "coin": "MATIC", "amount": 1640.037 },
+
+    { "wallet": { "name": "Kraken" }, "coin": "ETH", "amount": 0.19981 },
+    { "wallet": { "name": "Kraken" }, "coin": "USDT", "amount": 957.964 },
+    { "wallet": { "name": "Kraken" }, "coin": "DAI", "amount": 100 },
+    { "wallet": { "name": "Kraken" }, "coin": "XTZ", "amount": 573.24 },
+    { "wallet": { "name": "Kraken" }, "coin": "XMR", "amount": 3.08015 },
+    { "wallet": { "name": "Kraken" }, "coin": "NEAR", "amount": 54 },
+    { "wallet": { "name": "Kraken" }, "coin": "GRT", "amount": 1144.37382 },
+    { "wallet": { "name": "Kraken" }, "coin": "LTC", "amount": 2 },
+    { "wallet": { "name": "Kraken" }, "coin": "ETC", "amount": 2.6 },
+    { "wallet": { "name": "Kraken" }, "coin": "OCEAN", "amount": 120 },
+    { "wallet": { "name": "Kraken" }, "coin": "TRX", "amount": 206 },
+
+    { "wallet": { "name": "Binance" }, "coin": "RUNE", "amount": 172.786 },
+    { "wallet": { "name": "Binance" }, "coin": "AAVE", "amount": 2.379 },
+    { "wallet": { "name": "Binance" }, "coin": "UNI", "amount": 57.929091 },
+    { "wallet": { "name": "Binance" }, "coin": "FET", "amount": 173.1171 },
+    { "wallet": { "name": "Binance" }, "coin": "EGLD", "amount": 3.996 },
+    { "wallet": { "name": "Binance" }, "coin": "XNO", "amount": 97.62 },
+    { "wallet": { "name": "Binance" }, "coin": "NEO", "amount": 5.81418 },
+    { "wallet": { "name": "Binance" }, "coin": "RLC", "amount": 40.665 },
+    { "wallet": { "name": "Binance" }, "coin": "BAND", "amount": 41.334 },
+    { "wallet": { "name": "Binance" }, "coin": "YFI", "amount": 0.00791208 },
+
+    { "wallet": { "name": "Bitfinex" }, "coin": "AVAX", "amount": 1.49 },
+    { "wallet": { "name": "Bitfinex" }, "coin": "BCHN", "amount": 1.21 },
+    { "wallet": { "name": "Bitfinex" }, "coin": "EGLD", "amount": 0.25 },
+    { "wallet": { "name": "Bitfinex" }, "coin": "EOS", "amount": 7.4 },
+    { "wallet": { "name": "Bitfinex" }, "coin": "TRX", "amount": 547.5 },
+    { "wallet": { "name": "Bitfinex" }, "coin": "LEO", "amount": 5.99 },
+
+  
+    { "wallet": { "name": "Coinbase" }, "coin": "BTC", "amount": 0.05684 },
+    { "wallet": { "name": "Coinbase" }, "coin": "ETH", "amount": 0.8494 },
+    { "wallet": { "name": "Coinbase" }, "coin": "XLM", "amount": 31.33 }
+
+
+  ]
+}
