@@ -1,7 +1,6 @@
-use serde::Deserialize;
 use serde::de;
-use std::{ collections::HashMap, fs };
-use crate::{ Result };
+use std::fs;
+use crate::Result;
 
 pub mod coins;
 pub mod wallets;

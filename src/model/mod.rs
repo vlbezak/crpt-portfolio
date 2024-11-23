@@ -30,3 +30,16 @@ pub struct PriceInfo {
     pub currency: Currency,
     pub value: f64,
 }
+
+#[derive(Debug, ValueEnum, Clone)]
+pub enum ReportSortBy {
+    Token,
+    Amount,
+    Value,
+}
+
+#[derive(Debug, ValueEnum, Clone, PartialEq)]
+pub enum ReportOrder {
+    Asc,
+    Desc,
+}

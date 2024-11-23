@@ -51,6 +51,7 @@
         { "code": "API3", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" },
         { "code": "ALU", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" },
         { "code": "BNB", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" },
+        { "code": "UTK", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" },
         { "code": "POL", "priceProvider": "CoinAPI", "allTimeHighProvider": "CoinGecko" }
     ]
 }

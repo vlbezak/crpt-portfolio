@@ -1,9 +1,19 @@
 {
     "wallets": [
         {
+            "name": "Huobi",
+            "kind": "Huobi",
+            "address": "huobi",
+            "holdings": [
+                { "coin": "BTC", "amount": 0.00202370 },
+                { "coin": "UTK", "amount": 1207.5830 },
+                { "coin": "USDT", "amount": 30.4829 }
+            ]
+        },
+        {
             "name": "Poloniex",
             "kind": "Poloniex",
-            "address": "poloniex-address",
+            "address": "poloniex",
             "holdings": [
                 { "coin": "OM", "amount": 799 }
             ]
