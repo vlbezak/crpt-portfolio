@@ -9,7 +9,7 @@ pub struct CoinsData {
     pub coins: Vec<CoinDef>,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct CoinDef {
     pub code: String,
@@ -20,11 +20,12 @@ pub struct CoinDef {
     pub price_provider_data: Option<HashMap<String, String>>,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Eq, PartialEq, Hash, Clone)]
 #[serde(rename_all = "PascalCase")]
 pub enum PriceProviderEnum {
     CoinAPI,
     CoinGecko,
+    CryptoCompare,
     // Add more providers here if needed
 }
 

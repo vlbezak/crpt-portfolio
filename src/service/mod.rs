@@ -8,14 +8,14 @@ use ordered_float::OrderedFloat;
 
 #[derive(Debug)]
 pub struct ReportFilter {
-    coin: Option<String>,
-    wallet_name: Option<String>,
-    wallet_kind: Option<String>,
-    wallet_address: Option<String>,
-    currency: Currency,
-    group_by_token: bool,
-    sort_by: ReportSortBy,
-    order: ReportOrder,
+    pub coin: Option<String>,
+    pub wallet_name: Option<String>,
+    pub wallet_kind: Option<String>,
+    pub wallet_address: Option<String>,
+    pub currency: Currency,
+    pub group_by_token: bool,
+    pub sort_by: ReportSortBy,
+    pub order: ReportOrder,
 }
 
 impl Default for ReportFilter {

@@ -1,0 +1,872 @@
+[
+  {
+    "coin": "OM",
+    "currency": "USD",
+    "value": 3.977981740380625
+  },
+  {
+    "coin": "OM",
+    "currency": "EUR",
+    "value": 3.759832944924627
+  },
+  {
+    "coin": "FORTH",
+    "currency": "EUR",
+    "value": 5.243178275922085
+  },
+  {
+    "coin": "FORTH",
+    "currency": "USD",
+    "value": 5.54500109510487
+  },
+  {
+    "coin": "AMPL",
+    "currency": "USD",
+    "value": 1.346648357921378
+  },
+  {
+    "coin": "AMPL",
+    "currency": "EUR",
+    "value": 1.272799422366627
+  },
+  {
+    "coin": "LINK",
+    "currency": "EUR",
+    "value": 24.56169020174513
+  },
+  {
+    "coin": "LINK",
+    "currency": "USD",
+    "value": 25.9830362777544
+  },
+  {
+    "coin": "ADA",
+    "currency": "USD",
+    "value": 1.18895357742436
+  },
+  {
+    "coin": "ADA",
+    "currency": "EUR",
+    "value": 1.12453841975398
+  },
+  {
+    "coin": "WBTC",
+    "currency": "USD",
+    "value": 99602.63036143448
+  },
+  {
+    "coin": "WBTC",
+    "currency": "EUR",
+    "value": 94149.8004761179
+  },
+  {
+    "coin": "DOGE",
+    "currency": "USD",
+    "value": 0.464805788095461
+  },
+  {
+    "coin": "DOGE",
+    "currency": "EUR",
+    "value": 0.439381219527617
+  },
+  {
+    "coin": "XRP",
+    "currency": "EUR",
+    "value": 2.41890133177231
+  },
+  {
+    "coin": "XRP",
+    "currency": "USD",
+    "value": 2.55893708957727
+  },
+  {
+    "coin": "BTC",
+    "currency": "EUR",
+    "value": 94368.7958651107
+  },
+  {
+    "coin": "BTC",
+    "currency": "USD",
+    "value": 99834.309203773
+  },
+  {
+    "coin": "PRQ",
+    "currency": "EUR",
+    "value": 0.1412647620360167
+  },
+  {
+    "coin": "PRQ",
+    "currency": "USD",
+    "value": 0.149762328293224
+  },
+  {
+    "coin": "ETH",
+    "currency": "EUR",
+    "value": 3769.1810857481
+  },
+  {
+    "coin": "ETH",
+    "currency": "USD",
+    "value": 3987.78911668161
+  },
+  {
+    "coin": "MKR",
+    "currency": "USD",
+    "value": 2154.53100252268
+  },
+  {
+    "coin": "MKR",
+    "currency": "EUR",
+    "value": 2035.918308478675
+  },
+  {
+    "coin": "USDT",
+    "currency": "EUR",
+    "value": 0.945602304395095
+  },
+  {
+    "coin": "USDT",
+    "currency": "USD",
+    "value": 1.00046697702973
+  },
+  {
+    "coin": "ATOM",
+    "currency": "EUR",
+    "value": 9.515972120906069
+  },
+  {
+    "coin": "ATOM",
+    "currency": "USD",
+    "value": 10.0651790531081
+  },
+  {
+    "coin": "USDC",
+    "currency": "USD",
+    "value": 0.9999416213696448
+  },
+  {
+    "coin": "USDC",
+    "currency": "EUR",
+    "value": 0.945196617749811
+  },
+  {
+    "coin": "LTC",
+    "currency": "USD",
+    "value": 133.923311224905
+  },
+  {
+    "coin": "LTC",
+    "currency": "EUR",
+    "value": 126.5558196699286
+  },
+  {
+    "coin": "TRAC",
+    "currency": "EUR",
+    "value": 1.095907812539418
+  },
+  {
+    "coin": "TRAC",
+    "currency": "USD",
+    "value": 1.15660683141221
+  },
+  {
+    "coin": "TRX",
+    "currency": "EUR",
+    "value": 0.29891052220556
+  },
+  {
+    "coin": "TRX",
+    "currency": "USD",
+    "value": 0.3161916054358
+  },
+  {
+    "coin": "AVAX",
+    "currency": "EUR",
+    "value": 49.32789318744804
+  },
+  {
+    "coin": "AVAX",
+    "currency": "USD",
+    "value": 52.1584077022048
+  },
+  {
+    "coin": "SOL",
+    "currency": "USD",
+    "value": 236.533519240508
+  },
+  {
+    "coin": "SOL",
+    "currency": "EUR",
+    "value": 223.617208034399
+  },
+  {
+    "coin": "XLM",
+    "currency": "USD",
+    "value": 0.488533371206075
+  },
+  {
+    "coin": "XLM",
+    "currency": "EUR",
+    "value": 0.461796093161107
+  },
+  {
+    "coin": "SAGA",
+    "currency": "EUR",
+    "value": 2.584471723381774
+  },
+  {
+    "coin": "SAGA",
+    "currency": "USD",
+    "value": 2.734446011245833
+  },
+  {
+    "coin": "XNO",
+    "currency": "USD",
+    "value": 0.0001380655020460764
+  },
+  {
+    "coin": "XNO",
+    "currency": "EUR",
+    "value": 0.0001304931180009
+  },
+  {
+    "coin": "INJ",
+    "currency": "EUR",
+    "value": 30.8755808859118
+  },
+  {
+    "coin": "INJ",
+    "currency": "USD",
+    "value": 32.6838331895577
+  },
+  {
+    "coin": "GRT",
+    "currency": "EUR",
+    "value": 0.3029618047393136
+  },
+  {
+    "coin": "GRT",
+    "currency": "USD",
+    "value": 0.32052972102011
+  },
+  {
+    "coin": "OCEAN",
+    "currency": "USD",
+    "value": 0.888300115302151
+  },
+  {
+    "coin": "OCEAN",
+    "currency": "EUR",
+    "value": 0.8402
+  },
+  {
+    "coin": "KSM",
+    "currency": "USD",
+    "value": 44.9887269836579
+  },
+  {
+    "coin": "KSM",
+    "currency": "EUR",
+    "value": 42.51194917809543
+  },
+  {
+    "coin": "KAVA",
+    "currency": "EUR",
+    "value": 0.6655918206454032
+  },
+  {
+    "coin": "KAVA",
+    "currency": "USD",
+    "value": 0.7042154427985684
+  },
+  {
+    "coin": "AAVE",
+    "currency": "EUR",
+    "value": 262.4075712331517
+  },
+  {
+    "coin": "AAVE",
+    "currency": "USD",
+    "value": 277.721587537672
+  },
+  {
+    "coin": "RUNE",
+    "currency": "USD",
+    "value": 7.426021516144052
+  },
+  {
+    "coin": "RUNE",
+    "currency": "EUR",
+    "value": 7.018731599295604
+  },
+  {
+    "coin": "DAI",
+    "currency": "EUR",
+    "value": 0.9453212363478402
+  },
+  {
+    "coin": "DAI",
+    "currency": "USD",
+    "value": 0.99982112878917
+  },
+  {
+    "coin": "DOT",
+    "currency": "USD",
+    "value": 10.3642519726595
+  },
+  {
+    "coin": "DOT",
+    "currency": "EUR",
+    "value": 9.800367193062954
+  },
+  {
+    "coin": "XMR",
+    "currency": "USD",
+    "value": 200.5538285354112
+  },
+  {
+    "coin": "XMR",
+    "currency": "EUR",
+    "value": 189.5541900385059
+  },
+  {
+    "coin": "NEAR",
+    "currency": "EUR",
+    "value": 7.235719186854671
+  },
+  {
+    "coin": "NEAR",
+    "currency": "USD",
+    "value": 7.65956082019799
+  },
+  {
+    "coin": "UNI",
+    "currency": "USD",
+    "value": 18.4316404587872
+  },
+  {
+    "coin": "UNI",
+    "currency": "EUR",
+    "value": 17.4333559965285
+  },
+  {
+    "coin": "FET",
+    "currency": "USD",
+    "value": 2.04459115185143
+  },
+  {
+    "coin": "FET",
+    "currency": "EUR",
+    "value": 1.932036127961912
+  },
+  {
+    "coin": "EGLD",
+    "currency": "USD",
+    "value": 53.88616177153488
+  },
+  {
+    "coin": "EGLD",
+    "currency": "EUR",
+    "value": 50.93070435742727
+  },
+  {
+    "coin": "ETC",
+    "currency": "USD",
+    "value": 36.66898477970473
+  },
+  {
+    "coin": "ETC",
+    "currency": "EUR",
+    "value": 34.65782608195861
+  },
+  {
+    "coin": "XTZ",
+    "currency": "USD",
+    "value": 1.74904440518947
+  },
+  {
+    "coin": "XTZ",
+    "currency": "EUR",
+    "value": 1.653757101722637
+  },
+  {
+    "coin": "BNB",
+    "currency": "USD",
+    "value": 741.7812293923464
+  },
+  {
+    "coin": "BNB",
+    "currency": "EUR",
+    "value": 701.1036023180881
+  },
+  {
+    "coin": "UTK",
+    "currency": "EUR",
+    "value": 0.06361416032852323
+  },
+  {
+    "coin": "UTK",
+    "currency": "USD",
+    "value": 0.06730501726026629
+  },
+  {
+    "coin": "NEO",
+    "currency": "EUR",
+    "value": 19.81023827010176
+  },
+  {
+    "coin": "NEO",
+    "currency": "USD",
+    "value": 20.95961688110738
+  },
+  {
+    "coin": "BAND",
+    "currency": "EUR",
+    "value": 2.109563627140857
+  },
+  {
+    "coin": "BAND",
+    "currency": "USD",
+    "value": 2.231959293388373
+  },
+  {
+    "coin": "RLC",
+    "currency": "USD",
+    "value": 2.81011065682797
+  },
+  {
+    "coin": "RLC",
+    "currency": "EUR",
+    "value": 2.657197404412013
+  },
+  {
+    "coin": "CQT",
+    "currency": "USD",
+    "value": 0.0066
+  },
+  {
+    "coin": "CQT",
+    "currency": "EUR",
+    "value": 0.0062
+  },
+  {
+    "coin": "API3",
+    "currency": "EUR",
+    "value": 2.493372855815612
+  },
+  {
+    "coin": "API3",
+    "currency": "USD",
+    "value": 2.63911790300235
+  },
+  {
+    "coin": "EOS",
+    "currency": "USD",
+    "value": 1.30746830562205
+  },
+  {
+    "coin": "EOS",
+    "currency": "EUR",
+    "value": 1.235769661816956
+  },
+  {
+    "coin": "SAND",
+    "currency": "EUR",
+    "value": 0.8518297011613604
+  },
+  {
+    "coin": "SAND",
+    "currency": "USD",
+    "value": 0.9012523696515132
+  },
+  {
+    "coin": "YFI",
+    "currency": "USD",
+    "value": 13551.2421416616
+  },
+  {
+    "coin": "YFI",
+    "currency": "EUR",
+    "value": 12801.75131541512
+  },
+  {
+    "coin": "MATIC",
+    "currency": "EUR",
+    "value": 0.665478773029222
+  },
+  {
+    "coin": "MATIC",
+    "currency": "USD",
+    "value": 0.703775788733182
+  },
+  {
+    "coin": "AIR",
+    "currency": "EUR",
+    "value": 0.0185
+  },
+  {
+    "coin": "AIR",
+    "currency": "USD",
+    "value": 0.01894
+  },
+  {
+    "coin": "CHZ",
+    "currency": "EUR",
+    "value": 0.1243958478873255
+  },
+  {
+    "coin": "CHZ",
+    "currency": "USD",
+    "value": 0.1316132233126069
+  },
+  {
+    "coin": "ETHW",
+    "currency": "USD",
+    "value": 5.137263152214621
+  },
+  {
+    "coin": "ETHW",
+    "currency": "EUR",
+    "value": 4.855547106556117
+  },
+  {
+    "coin": "LEO",
+    "currency": "EUR",
+    "value": 8.719805809643496
+  },
+  {
+    "coin": "LEO",
+    "currency": "USD",
+    "value": 9.2391
+  },
+  {
+    "coin": "BCH",
+    "currency": "EUR",
+    "value": 585.9653359435001
+  },
+  {
+    "coin": "BCH",
+    "currency": "USD",
+    "value": 619.675030178111
+  },
+  {
+    "coin": "ALU",
+    "currency": "EUR",
+    "value": 0.1335399478176679
+  },
+  {
+    "coin": "ALU",
+    "currency": "USD",
+    "value": 0.1412878586526467
+  },
+  {
+    "coin": "CXT",
+    "currency": "EUR",
+    "value": 0.132975364597995
+  },
+  {
+    "coin": "CXT",
+    "currency": "USD",
+    "value": 0.1406905186398461
+  },
+  {
+    "coin": "KILT",
+    "currency": "EUR",
+    "value": 0.1907701609403975
+  },
+  {
+    "coin": "KILT",
+    "currency": "USD",
+    "value": 0.2
+  },
+  {
+    "coin": "PHA",
+    "currency": "USD",
+    "value": 0.1942301685924317
+  },
+  {
+    "coin": "PHA",
+    "currency": "EUR",
+    "value": 0.1835790196397337
+  },
+  {
+    "coin": "BAT",
+    "currency": "USD",
+    "value": 0.335823791810817
+  },
+  {
+    "coin": "BAT",
+    "currency": "EUR",
+    "value": 0.317226827206851
+  },
+  {
+    "coin": "CLV",
+    "currency": "USD",
+    "value": 0.0873
+  },
+  {
+    "coin": "CLV",
+    "currency": "EUR",
+    "value": 0.08261070250084428
+  },
+  {
+    "coin": "LIT",
+    "currency": "EUR",
+    "value": 1.128007333228498
+  },
+  {
+    "coin": "LIT",
+    "currency": "USD",
+    "value": 1.193453668768031
+  },
+  {
+    "coin": "WISE",
+    "currency": "USD",
+    "value": 0.2369146459753068
+  },
+  {
+    "coin": "WISE",
+    "currency": "EUR",
+    "value": 0.2239270483042946
+  },
+  {
+    "coin": "DGB",
+    "currency": "EUR",
+    "value": 0.01683817619120532
+  },
+  {
+    "coin": "DGB",
+    "currency": "USD",
+    "value": 0.01781511747201184
+  },
+  {
+    "coin": "CFG",
+    "currency": "USD",
+    "value": 0.4942
+  },
+  {
+    "coin": "CFG",
+    "currency": "EUR",
+    "value": 0.4668598193601254
+  },
+  {
+    "coin": "GLMR",
+    "currency": "EUR",
+    "value": 0.3640255284504097
+  },
+  {
+    "coin": "GLMR",
+    "currency": "USD",
+    "value": 0.3851460798671578
+  },
+  {
+    "coin": "MANTA",
+    "currency": "EUR",
+    "value": 1.209436603179586
+  },
+  {
+    "coin": "MANTA",
+    "currency": "USD",
+    "value": 1.27997998970393
+  },
+  {
+    "coin": "MOVR",
+    "currency": "EUR",
+    "value": 18.37283875917151
+  },
+  {
+    "coin": "MOVR",
+    "currency": "USD",
+    "value": 19.4480174545612
+  },
+  {
+    "coin": "HIFI",
+    "currency": "USD",
+    "value": 0.797705199494295
+  },
+  {
+    "coin": "HIFI",
+    "currency": "EUR",
+    "value": 0.7539608267432142
+  },
+  {
+    "coin": "SXP",
+    "currency": "USD",
+    "value": 0.4399871236332153
+  },
+  {
+    "coin": "SXP",
+    "currency": "EUR",
+    "value": 0.4158592117754402
+  },
+  {
+    "coin": "REN",
+    "currency": "USD",
+    "value": 0.04767815469374239
+  },
+  {
+    "coin": "REN",
+    "currency": "EUR",
+    "value": 0.0450635911026702
+  },
+  {
+    "coin": "IRIS",
+    "currency": "USD",
+    "value": 0.01021183114906614
+  },
+  {
+    "coin": "IRIS",
+    "currency": "EUR",
+    "value": 0.009651837120521466
+  },
+  {
+    "coin": "XVG",
+    "currency": "USD",
+    "value": 0.01519132526008545
+  },
+  {
+    "coin": "XVG",
+    "currency": "EUR",
+    "value": 0.01435826688816889
+  },
+  {
+    "coin": "SLF",
+    "currency": "EUR",
+    "value": 0.5030604259165131
+  },
+  {
+    "coin": "SLF",
+    "currency": "USD",
+    "value": 0.5322477019752259
+  },
+  {
+    "coin": "GAS",
+    "currency": "EUR",
+    "value": 6.286999141550031
+  },
+  {
+    "coin": "GAS",
+    "currency": "USD",
+    "value": 6.651767209304507
+  },
+  {
+    "coin": "CRV",
+    "currency": "USD",
+    "value": 1.23616360929941
+  },
+  {
+    "coin": "CRV",
+    "currency": "EUR",
+    "value": 1.168485723897873
+  },
+  {
+    "coin": "ALGO",
+    "currency": "EUR",
+    "value": 0.4652918405678581
+  },
+  {
+    "coin": "ALGO",
+    "currency": "USD",
+    "value": 0.492829379201169
+  },
+  {
+    "coin": "SC",
+    "currency": "USD",
+    "value": 0.00783982373271903
+  },
+  {
+    "coin": "SC",
+    "currency": "EUR",
+    "value": 0.007406901248407974
+  },
+  {
+    "coin": "FLOKI",
+    "currency": "USD",
+    "value": 0.0002622133897210703
+  },
+  {
+    "coin": "FLOKI",
+    "currency": "EUR",
+    "value": 0.000247834192659857
+  },
+  {
+    "coin": "DIA",
+    "currency": "EUR",
+    "value": 0.9219486510423122
+  },
+  {
+    "coin": "DIA",
+    "currency": "USD",
+    "value": 0.976919615372716
+  },
+  {
+    "coin": "1INCH",
+    "currency": "USD",
+    "value": 0.560887425955552
+  },
+  {
+    "coin": "1INCH",
+    "currency": "EUR",
+    "value": 0.5301248173925622
+  },
+  {
+    "coin": "GHST",
+    "currency": "USD",
+    "value": 1.428583215066018
+  },
+  {
+    "coin": "GHST",
+    "currency": "EUR",
+    "value": 1.350230689744446
+  },
+  {
+    "coin": "POL",
+    "currency": "USD",
+    "value": 0.703962266252186
+  },
+  {
+    "coin": "POL",
+    "currency": "EUR",
+    "value": 0.6653525298992314
+  },
+  {
+    "coin": "SWAP",
+    "currency": "USD",
+    "value": 0.1759493354233829
+  },
+  {
+    "coin": "SWAP",
+    "currency": "EUR",
+    "value": 0.1662991627112269
+  },
+  {
+    "coin": "POLS",
+    "currency": "USD",
+    "value": 0.57010025634408
+  },
+  {
+    "coin": "POLS",
+    "currency": "EUR",
+    "value": 0.538340140025077
+  },
+  {
+    "coin": "RAMP",
+    "currency": "EUR",
+    "value": 0.03774751834604428
+  },
+  {
+    "coin": "RAMP",
+    "currency": "USD",
+    "value": 0.03993372368150632
+  },
+  {
+    "coin": "YFII",
+    "currency": "USD",
+    "value": 645.9010013743285
+  },
+  {
+    "coin": "YFII",
+    "currency": "EUR",
+    "value": 610.4757114565328
+  }
+]

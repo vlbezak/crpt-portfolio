@@ -19,6 +19,15 @@
             ]
         },
         {
+            "name": "Bybit",
+            "kind": "Bybit",
+            "address": "bybit",
+            "holdings": [
+                { "coin": "BTC", "amount": 0.003560247 },
+                { "coin": "XRP", "amount": 42.90 }
+            ]
+        },
+        {
             "name": "Ethereum MetaMask 1",
             "kind": "Ethereum MetaMask 1",
             "address": "Ethereum MetaMask 1",
@@ -26,13 +35,18 @@
                 { "coin": "TRAC", "amount": 831.733 },
                 { "coin": "FORTH", "amount": 321.87 },
                 { "coin": "ETH", "amount": 0.7846 },
-                { "coin": "USDC", "amount": 336.94 },
                 { "coin": "MKR", "amount": 0.07 },
                 { "coin": "PRQ", "amount": 340 },
-                { "coin": "AMPL", "amount": 500 },
+                { "coin": "AMPL", "amount": 650 },
                 { "coin": "DAI", "amount": 19.5 },
                 { "coin": "USDC", "amount": 336.94715 },
-                { "coin": "API3", "amount": 50.99928 },
+                { "coin": "API3", "amount": 50.99928 },    
+                { "coin": "YFII", "amount": 0.2583 },    
+                { "coin": "1INCH", "amount": 153.4266 },    
+                { "coin": "GHST", "amount": 48.8966 },    
+                { "coin": "RAMP", "amount": 548.7547 },    
+                { "coin": "POLS", "amount":  80.431 },    
+                { "coin": "SWAP", "amount": 249.4771 },    
                 { "coin": "PHA", "amount": 596.54321 }         
             ]
         },
@@ -48,11 +62,11 @@
             ]
         },
         {
-            "name": "Ethereum MetaMask 2 - Arbitrum",
+            "name": "Ethereum MetaMask 2 - Movr",
             "kind": "Metamask",
-            "address": "Ethereum MetaMask 2 - Arbitrum",
+            "address": "Ethereum MetaMask 2 - Movr",
             "holdings": [
-                { "coin": "ETH", "amount": 0.218493 }
+                { "coin": "MOVR", "amount": 22.95 }
             ]
         },
         {
@@ -62,7 +76,8 @@
             "holdings": [
                 { "coin": "ALU", "amount": 1036.18605 },
                 { "coin": "BNB", "amount": 0.1065 },
-                { "coin": "USDC", "amount": 57.40877 }
+                { "coin": "USDC", "amount": 57.40877 },
+                { "coin": "FLOKI", "amount": 199265.4628 }
             ]
         },
         {
@@ -94,7 +109,7 @@
             "kind": "Ledger",
             "address": "Ledger",
             "holdings": [
-                { "coin": "XRP", "amount": 20938 },
+                { "coin": "XRP", "amount": 18918 },
                 { "coin": "BTC", "amount": 0.515727 },
                 { "coin": "USDT", "amount": 4096.45 },
                 { "coin": "LINK", "amount": 129.679 },
@@ -102,29 +117,32 @@
                 { "coin": "LTC", "amount": 13.39 },
                 { "coin": "DOGE", "amount": 1995 },
                 { "coin": "XLM", "amount": 1799.99 },
+                { "coin": "DGB", "amount": 4999.8 },
+                { "coin": "ALGO", "amount": 480.88 },
+                { "coin": "CRV", "amount": 197.9 },
                 { "coin": "ETC", "amount": 6.5728 }
             ]
         },
         {
-            "name": "Ledger ETH 1",
+            "name": "Ledger",
             "kind": "Ledger",
-            "address": "Ledger ETH 1",
+            "address": "ledger-eth-1",
             "holdings": [
                 { "coin": "ETH", "amount": 3.35779 }
             ]
         },
         {
-            "name": "Ledger ETH 2",
+            "name": "Ledger",
             "kind": "Ledger",
-            "address": "Ledger ETH 2",
+            "address": "Ledger-eth-lido",
             "holdings": [
                 { "coin": "ETH", "amount": 5.080709 }
             ]
         },
         {
-            "name": "Ledger ETH 3",
+            "name": "Ledger",
             "kind": "Ledger",
-            "address": "Ledger ETH 3",
+            "address": "Ledger-eth-kiln",
             "holdings": [
                 { "coin": "ETH", "amount": 5.080709 }
             ]
@@ -154,33 +172,41 @@
             ]
         },
         {
-            "name": "Kepler",
+            "name": "Kepler Kava",
             "kind": "Kepler",
-            "address": "Kepler",
+            "address": "kepler",
             "holdings": [
                 { "coin": "KAVA", "amount": 1000 }
             ]
         },
         {
-            "name": "Kepler Kava",
-            "kind": "Kepler Kava",
-            "address": "Kepler Kava",
+            "name": "Kepler Saga",
+            "kind": "Kepler",
+            "address": "kepler",
             "holdings": [
                 { "coin": "SAGA", "amount": 200 }
             ]
         },
         {
             "name": "Kepler Inj",
-            "kind": "Kepler Inj",
-            "address": "Kepler Inj",
+            "kind": "Kepler",
+            "address": "kepler",
             "holdings": [
                 { "coin": "INJ", "amount": 27.5 }
             ]
         },
         {
+            "name": "XUMM",
+            "kind": "XUMM",
+            "address": "xumm",
+            "holdings": [
+                { "coin": "XRP", "amount": 28 }
+            ]
+        },
+        {
             "name": "Kraken",
             "kind": "Kraken",
-            "address": "Kraken",
+            "address": "kraken",
             "holdings": [
                 { "coin": "SOL", "amount": 11.5 },
                 { "coin": "BTC", "amount": 0.01339 },
@@ -195,13 +221,20 @@
                 { "coin": "LTC", "amount": 2 },
                 { "coin": "ETC", "amount": 2.6 },
                 { "coin": "OCEAN", "amount": 120 },
+                { "coin": "CXT", "amount": 700 },
+                { "coin": "KILT", "amount": 160 },
+                { "coin": "SAND", "amount": 50 },
+                { "coin": "CHZ", "amount": 210 },
+                { "coin": "ETHW", "amount": 3.22 },
+                { "coin": "CQT", "amount": 700 },
+                { "coin": "XRP", "amount": 2020.4 },
                 { "coin": "TRX", "amount": 206 }
             ]
         },
         {
             "name": "Binance",
             "kind": "Binance",
-            "address": "Binance",
+            "address": "binance",
             "holdings": [
                 { "coin": "RUNE", "amount": 172.786 },
                 { "coin": "AAVE", "amount": 2.379 },
@@ -212,7 +245,29 @@
                 { "coin": "NEO", "amount": 5.81418 },
                 { "coin": "RLC", "amount": 40.665 },
                 { "coin": "BAND", "amount": 41.334 },
+                { "coin": "SXP", "amount": 130.4068 },
+                { "coin": "SC", "amount": 5999.9 },
+                { "coin": "REN", "amount": 599.4 },
+                { "coin": "MANTA", "amount": 25.139 },
+                { "coin": "BAT", "amount": 90.888 },
+                { "coin": "HIFI", "amount": 32.24671 },
+                { "coin": "TRX", "amount": 84.3 },
+                { "coin": "USDT", "amount": 17.07 },
+                { "coin": "IRIS", "amount": 999 },
+                { "coin": "CLV", "amount": 122.013 },
+                { "coin": "SLF", "amount": 30.969 },
+                { "coin": "GAS", "amount": 1.46712 },
+                { "coin": "XVG", "amount": 1399.832 },
+                { "coin": "LIT", "amount": 6.465 },
                 { "coin": "YFI", "amount": 0.00791208 }
+            ]
+        },
+        {
+            "name": "KuCoin",
+            "kind": "KuCoin",
+            "address": "kucoin",
+            "holdings": [
+                { "coin": "CFG", "amount": 98.242 }
             ]
         },
         {
@@ -221,7 +276,7 @@
             "address": "Bitfinex",
             "holdings": [
                 { "coin": "AVAX", "amount": 1.49 },
-                { "coin": "BCHN", "amount": 1.21 },
+                { "coin": "BCH", "amount": 1.21 },
                 { "coin": "EGLD", "amount": 0.25 },
                 { "coin": "EOS", "amount": 7.4 },
                 { "coin": "TRX", "amount": 547.5 },

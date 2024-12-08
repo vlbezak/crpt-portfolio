@@ -1,3 +1,7 @@
+use std::str::FromStr;
+
+use client::coingecko::CoinMarket;
+use coins::update_coins_prices;
 use config::wallets;
 use dotenv::dotenv;
 use model::{Currency, ReportOrder, ReportSortBy};
@@ -60,10 +64,15 @@ enum Commands {
         order: ReportOrder,
     },
 
+    /// List wallets
     ListWallets {
         /// Wallet name - for example Ethereum MetaMask 1
         #[arg(short = 'n', long)]
         wallet_names: bool,
+    },
+
+    // Update prices
+    UpdatePrices {
     },
 }
 
@@ -77,6 +86,7 @@ async fn main() -> Result<()> {
     match &cli.command {
         Commands::Holdings { .. } => handle_holdings(&cli.command).await?,
         Commands::ListWallets { .. } => handle_list_wallets(&cli.command).await?,
+        Commands::UpdatePrices { .. } => update_prices(&cli.command).await?,
     }
 
     Ok(())
@@ -95,13 +105,9 @@ async fn handle_holdings(holdings: &Commands) -> Result<()> {
             order
         } = holdings
     {
-        let coin_filter = token;
-
-        let prices = coins::get_all_coins_prices(&coin_filter).await?;
-        let wallets = wallets::read_default_wallets_config()?;
-
+    
         let report_filter: ReportFilter = ReportFilter::new(
-            coin_filter.clone(),
+            token.clone(),
             wallet_name.clone(),
             wallet_kind.clone(),
             wallet_address.clone(),
@@ -110,6 +116,9 @@ async fn handle_holdings(holdings: &Commands) -> Result<()> {
             sort_by.clone(),
             order.clone(),
         );
+
+        let wallets = wallets::read_default_wallets_config()?;
+        let prices = coins::get_coins_prices(&report_filter).await?;
 
         println!("Getting report for {:?}", report_filter);
         let report_lines = report_holdings(&wallets, &prices, &report_filter);
@@ -123,6 +132,39 @@ async fn handle_list_wallets(holdings: &Commands) -> Result<()> {
     if let Commands::ListWallets { wallet_names } = holdings {
         todo!("Not implemented");
     }
+
+    Ok(())
+}
+
+async fn update_prices(command: &Commands) -> Result<()> {
+
+    // let mut token_ids = Vec::new();
+    // token_ids.push(String::from("bitcoin"));
+    // token_ids.push(String::from("ripple"));
+    // token_ids.push(String::from("ethereum"));
+    // let coin_markets = client::coingecko::get_coins_markets(token_ids, "usd").await?;
+    // println!("{:?}", coin_markets);
+
+    let mut token_ids = Vec::new();
+    token_ids.push("BTC");
+    token_ids.push("WISE");
+    token_ids.push("ETH");
+    token_ids.push("XRP");
+
+    let mut currencies = Vec::new();
+    currencies.push(Currency::from_str("USD")?);
+    currencies.push(Currency::from_str("EUR")?);
+
+    coins::update_prices::update_coins_prices(&currencies).await?;
+
+//    let crypto_compare_client = client::cryptocompare::CryptoCompareClient::new();
+
+
+//    let coin_info = crypto_compare_client.get_coin_info(&token_ids, &currencies).await?;
+
+    // if let Commands::UpdatePrices { .. } = command {
+    //      coins::update_coins_prices().await?;
+    // }
 
     Ok(())
 }

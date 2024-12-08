@@ -5,3 +5,4 @@ This project expects evnironment variables:
 
 * COINAPI_API_KEY
 
+Try crptportfolio -h

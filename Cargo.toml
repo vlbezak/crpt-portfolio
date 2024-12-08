@@ -1,5 +1,5 @@
 [package]
-name = "crpt_portfolio"
+name = "crpt-portfolio"
 version = "0.1.0"
 edition = "2021"
 
@@ -12,5 +12,6 @@ serde = { version = "1.0", features = ["derive"]}
 serde_json = { version = "1.0" }
 async-trait = "0.1"
 clap = { version = "4.5.21", features = ["derive"] }
-ordered-float = "*"
+ordered-float = "4.5.0"
+chrono = "0.4.38"
 

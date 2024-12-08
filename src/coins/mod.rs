@@ -1,29 +1,68 @@
+use filestore::CoinPriceFileStore;
+
 use crate::model::PriceInfo;
 use crate::provider::get_price_provider;
+use crate::service::ReportFilter;
 use crate::Result;
 use crate::config::coins::{ read_default_coins_config, CoinsData };
 
+mod filestore;
+pub mod update_prices;
 
-pub async fn get_all_coins_prices(coin: &Option<String>) -> Result<Vec<PriceInfo>> {
+//:TODO - asi by sme mali ignorovat filter, lebo potom sa nevratia vsetky coins
+pub async fn get_coins_prices(filter: &ReportFilter) -> Result<Vec<PriceInfo>> {
+
+    let coin_price_store = CoinPriceFileStore {
+        dir_name: String::from("data"),
+    };
+    if let Some(latest_prices) = coin_price_store.read_latest_prices()? {
+        println!("Found latest prices");
+        return Ok(latest_prices);
+    }
+
+    //TODO -check if some coins are not missing
+    println!("Getting coins config");
     let coins_data: CoinsData = read_default_coins_config()?;
+    let price_info = get_coins_prices_for_coins_data(&filter, &coins_data).await?;
 
-    get_coins_prices_for_coins_data(coin, coins_data).await
+    println!("Storing prices");
+    coin_price_store.write_prices(&price_info)?;
+
+    Ok(price_info)
+
 }
 
-async fn get_coins_prices_for_coins_data(coin: &Option<String>, coins_data: CoinsData) -> Result<Vec<PriceInfo>> {
+//TODO - refactor
+pub async fn update_coins_prices() -> Result<()> {
+    let coin_price_store = CoinPriceFileStore {
+        dir_name: String::from("data"),
+    };
+    
+    println!("Getting coins config");
+
+    let coins_data: CoinsData = read_default_coins_config()?;
+    let price_info = get_coins_prices_for_coins_data(&ReportFilter::default(), &coins_data).await?;
+
+    println!("Storing prices");
+    coin_price_store.write_prices(&price_info)?;
+    Ok(())
+}
+
+async fn get_coins_prices_for_coins_data(filter: &ReportFilter, coins_data: &CoinsData) -> Result<Vec<PriceInfo>> {
     let mut result_prices: Vec<PriceInfo> = Vec::new();
-    for coin_def in coins_data.coins {
-        if let Some(coin_filter) = coin.as_ref() {
+    for coin_def in coins_data.coins.iter() {
+        if let Some(coin_filter) = filter.coin.as_ref() {
             if *coin_filter != coin_def.code {
                 continue;
             }
         }
 
         //println!("getting info for coin: {}", coin_def.code);
-        let price_provider = get_price_provider(coin_def.price_provider);
+        let price_provider = get_price_provider(&coin_def.price_provider);
         let coin_result = price_provider.get_price(
             &coin_def.code,
-            coin_def.price_provider_data
+            &coin_def.price_provider_data,
+            &Vec::new()
         ).await;
 
         if coin_result.is_err() {
@@ -37,4 +76,9 @@ async fn get_coins_prices_for_coins_data(coin: &Option<String>, coins_data: Coin
     }
 
     Ok(result_prices)
+}
+
+trait CoinPriceStore {
+    fn write_prices(&self, prices: &Vec<PriceInfo>) -> Result<String>;
+    fn read_latest_prices(&self) -> Result<Option<Vec<PriceInfo>>>;
 }
