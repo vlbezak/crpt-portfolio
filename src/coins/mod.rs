@@ -32,21 +32,6 @@ pub async fn get_coins_prices(filter: &ReportFilter) -> Result<Vec<PriceInfo>> {
 
 }
 
-//TODO - refactor
-pub async fn update_coins_prices() -> Result<()> {
-    let coin_price_store = CoinPriceFileStore {
-        dir_name: String::from("data"),
-    };
-    
-    println!("Getting coins config");
-
-    let coins_data: CoinsData = read_default_coins_config()?;
-    let price_info = get_coins_prices_for_coins_data(&ReportFilter::default(), &coins_data).await?;
-
-    println!("Storing prices");
-    coin_price_store.write_prices(&price_info)?;
-    Ok(())
-}
 
 async fn get_coins_prices_for_coins_data(filter: &ReportFilter, coins_data: &CoinsData) -> Result<Vec<PriceInfo>> {
     let mut result_prices: Vec<PriceInfo> = Vec::new();

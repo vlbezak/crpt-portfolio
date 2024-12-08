@@ -2,9 +2,7 @@
 use reqwest::{header::{HeaderMap, HeaderValue, CONTENT_TYPE, USER_AGENT}, Client};
 use serde::Deserialize;
 use std::env;
-use crate::{model::PriceInfo, Result};
-
-use super::CurrentPriceApi;
+use crate::{Result};
 
 const API_KEY_ENV_PARAM: &str  = "COINGECKO_API_KEY";
 
@@ -32,43 +30,21 @@ pub struct CoinMarket {
 }
 
 
+#[allow(unused)]
 pub struct CoinGeckoClient {
 
 }
 
+#[allow(unused)]
 impl CoinGeckoClient {
     pub fn new() -> Self {
         Self {}
     }
 }
 
-// impl CurrentPriceApi for CoinGeckoClient {
-//     async fn get_prices(&self, symbol: &str) -> Result<Vec<PriceInfo>> {
-//         let response: ExchangeRateResponse = get_coin_price(symbol).await?;
-
-//         let rate_usd = response.rates
-//         .into_iter()
-//         .filter(|rate| rate.asset_id_quote == "USD")
-//         .next();
-
-//         let Some(val) = rate_usd else {
-//             return Err(format!("Cannot find USD rate for: {}", symbol).into());
-//         };
-        
-//         let mut prices = Vec::new();
-//         prices.push(PriceInfo { 
-//             coin: String::from(symbol),
-//             currency: Currency::USD,
-//             value: val.rate,
-//         });
-
-//         Ok(prices)
-//     }
-// }
-
-
+#[allow(unused)]
 pub async fn get_coins_markets(token_ids : Vec<String>, currency: &str) -> Result<Vec<CoinMarket>> {
-    let currency = currency.to_lowercase();
+    let _currency = currency.to_lowercase();
 
     let base_url = "https://api.coingecko.com/api/v3/coins/markets";
     let ids = token_ids.join(","); // Join the token IDs with commas

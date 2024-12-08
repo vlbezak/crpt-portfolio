@@ -62,6 +62,7 @@ pub struct ReportLine {
     amount: f64,
     value: f64,
     wallet_name: String,
+    #[allow(unused)]
     wallet_kind: String,
     wallet_address: String,
 }

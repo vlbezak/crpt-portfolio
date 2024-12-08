@@ -35,9 +35,10 @@ impl Currency {
         self.as_str_pair().0
     }
 
-    pub fn to_lowercase_str(&self) -> &'static str {
-        self.as_str_pair().1
-    }
+//    pub fn to_lowercase_str(&self) -> &'static str {
+//        self.as_str_pair().1
+//    }
+
 }
 
 

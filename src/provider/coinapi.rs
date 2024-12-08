@@ -2,7 +2,6 @@ use async_trait::async_trait;
 
 use crate::client::coinapi::CoinAPIClient;
 use crate::client::CurrentPriceApi;
-use crate::config::coins::CoinDef;
 use crate::Result;
 use crate::model::{Currency, PriceInfo};
 

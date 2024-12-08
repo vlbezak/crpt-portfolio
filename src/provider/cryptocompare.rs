@@ -1,7 +1,7 @@
 use async_trait::async_trait;
 
 use crate::{
-    client::{ self, cryptocompare::{ CryptoCompareClient, PriceMultiFullResponse } },
+    client::{ cryptocompare::{ CryptoCompareClient, PriceMultiFullResponse } },
     config::coins::CoinDef,
     model::{ Currency, PriceInfo },
 };
@@ -58,7 +58,7 @@ impl PriceProvider for CryptoComparePriceProvider {
         for group in all_coins {
             println!("Making request for {:?}", group);
             match client.get_coin_info(&group, &currencies_str).await {
-                Ok(mut res) => {
+                Ok(res) => {
                     let mut res: Vec<PriceInfo> = convert_response(&res)?;
                     result.append(&mut res);
                 }

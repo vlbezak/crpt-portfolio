@@ -4,7 +4,7 @@ use crate::coins::CoinPriceStore;
 use crate::config::coins::{read_default_coins_config, CoinDef, CoinsData, PriceProviderEnum};
 use crate::model::{Currency, PriceInfo};
 use crate::provider::get_price_provider;
-use crate::{provider, Result};
+use crate::{Result};
 use crate::coins::filestore::CoinPriceFileStore;
 
 pub async fn update_coins_prices(currencies: &Vec<Currency>) -> Result<Vec<PriceInfo>> {

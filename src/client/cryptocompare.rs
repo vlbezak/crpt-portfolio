@@ -2,10 +2,7 @@ use reqwest::{ header::{ HeaderMap, HeaderValue, CONTENT_TYPE, USER_AGENT }, Cli
 use serde::Deserialize;
 use std::{ collections::HashMap, env };
 use crate::Result;
-use crate::model::PriceInfo;
-use crate::model::Currency;
 
-use super::CurrentPriceApi;
 
 const API_KEY_ENV_PARAM: &str = "CRYPTOCOMPARE_API_KEY";
 
