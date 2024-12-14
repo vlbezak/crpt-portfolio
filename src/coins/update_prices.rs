@@ -4,7 +4,7 @@ use crate::coins::CoinPriceStore;
 use crate::config::coins::{read_default_coins_config, CoinDef, CoinsData, PriceProviderEnum};
 use crate::model::{Currency, PriceInfo};
 use crate::provider::get_price_provider;
-use crate::{Result};
+use crate::Result;
 use crate::coins::filestore::CoinPriceFileStore;
 
 pub async fn update_coins_prices(currencies: &Vec<Currency>) -> Result<Vec<PriceInfo>> {
@@ -32,51 +32,15 @@ async fn get_coins_prices_for_coins_data(coins_data: &CoinsData, currencies: &Ve
         .push(coin_def.clone());
     }
 
-    println!("Providers: {:#?}", providers);
+    println!("Providers: {:?}", providers.keys());
     for (provider, coins) in providers {
-        println!("Processing provider:{:#?}", provider);
+        println!("Processing provider:{:?}", provider);
         let provider_impl = get_price_provider(&provider);
         let mut prices = provider_impl.get_prices(&coins, &currencies).await?;
         result_prices.append(&mut prices);
     }
 
-    println!("Result prices: {:#?}", result_prices);
+    //println!("Result prices: {:#?}", result_prices);
 
     Ok(result_prices)
 }
-
-
-
-
-// async fn get_coins_prices_for_coins_data(coins_data: &CoinsData) -> Result<Vec<PriceInfo>> {
-//     let mut result_prices: Vec<PriceInfo> = Vec::new();
-
-
-//     for coin_def in coins_data.coins.iter() {
-//         if let Some(coin_filter) = filter.coin.as_ref() {
-//             if *coin_filter != coin_def.code {
-//                 continue;
-//             }
-//         }
-
-//         //println!("getting info for coin: {}", coin_def.code);
-//         let price_provider = get_price_provider(&coin_def.price_provider);
-//         let coin_result = price_provider.get_price(
-//             &coin_def.code,
-//             &coin_def.price_provider_data
-//         ).await;
-
-//         if coin_result.is_err() {
-//             println!("Error reading coin: {} skipping", coin_def.code);
-//             continue;
-//         }
-
-//         let mut coin_result = coin_result.unwrap();
-//         println!("Price: {}:{:?}", coin_def.code, coin_result);
-//         result_prices.append(&mut coin_result);
-//     }
-
-//     Ok(result_prices)
-// }
-
-

@@ -61,6 +61,14 @@ pub struct ReportLine {
     token: String,
     amount: f64,
     value: f64,
+    mkt_cap: f64,
+    wallet_name: String,
+    #[allow(unused)]
+    wallet_kind: String,
+    wallet_address: String,
+}
+
+pub struct ListWalletLine {
     wallet_name: String,
     #[allow(unused)]
     wallet_kind: String,
@@ -96,16 +104,17 @@ pub fn report_holdings(
                     continue;
                 }
             }
-            let Some(val_of_coin) = find_price(&holding.coin, &prices, &filter.currency) else {
+            let Some(price_info) = find_price_info(&holding.coin, &prices, &filter.currency) else {
                 println!("Cannot find price for {}", holding.coin);
                 continue;
             };
-            let val_of_coin = holding.amount * val_of_coin;
+            let val_of_coin = holding.amount * price_info.value;
 
             report_lines.push(ReportLine {
                 token: holding.coin.clone(),
                 amount: holding.amount,
                 value: val_of_coin,
+                mkt_cap: price_info.market_cap,
                 wallet_name: wallet.name.clone(),
                 wallet_kind: wallet.kind.clone(),
                 wallet_address: wallet.address.clone(),
@@ -131,20 +140,22 @@ pub fn report_holdings(
 }
 
 fn group_by_token(report_lines: &Vec<ReportLine>) -> Vec<ReportLine> {
-    let mut grouped: HashMap<String, (f64, f64)> = HashMap::new();
+    let mut grouped: HashMap<String, (f64, f64, f64)> = HashMap::new();
 
     for line in report_lines {
-        let entry = grouped.entry(line.token.clone()).or_insert((0.0, 0.0));
+        let entry = grouped.entry(line.token.clone()).or_insert((0.0, 0.0, 0.0));
         entry.0 += line.amount;
         entry.1 += line.value;
+        entry.2 = line.mkt_cap;
     }
 
     grouped
         .into_iter()
-        .map(|(token, (total_amount, total_value))| ReportLine {
+        .map(|(token, (total_amount, total_value, mkt_cap))| ReportLine {
             token,
             amount: total_amount,
             value: total_value,
+            mkt_cap,
             wallet_name: "-".to_string(),
             wallet_kind: "-".to_string(),
             wallet_address: "-".to_string(),
@@ -154,18 +165,19 @@ fn group_by_token(report_lines: &Vec<ReportLine>) -> Vec<ReportLine> {
 
 pub fn write_report(report_lines: &Vec<ReportLine>) {
     println!(
-        "-----------------------------------------------------------------------------------------------"
+        "-------------------------------------------------------------------------------------------------------"
     );
     println!(
-        "{:8}|{:14.6} | {:12.6} | {:32} | {:32}",
+        "{:8}|{:14.6} | {:12.2} | {:22.2} | {:32} | {:32}",
         "Token",
         "Amount",
         "Value",
+        "Mkt.Cap",
         "Wallet",
         "Address"
     );
     println!(
-        "-----------------------------------------------------------------------------------------------"
+        "-------------------------------------------------------------------------------------------------------"
     );
 
     let mut sum = 0.0;
@@ -175,11 +187,69 @@ pub fn write_report(report_lines: &Vec<ReportLine>) {
         amount += line.amount;
 
         println!(
-            "{:8}|{:14.4} | {:12.4} | {:32} | {:32}",
+            "{:8}|{:14.6} | {:12.2} | {:22.2} | {:32} | {:32}",
             line.token,
             line.amount,
             line.value,
+            line.mkt_cap,
             line.wallet_name,
+            line.wallet_address
+        );
+    }
+
+    println!(
+        "-----------------------------------------------------------------------------------------------------"
+    );
+    println!("Amount  | {:14.6}  |", amount);
+    println!("Sum     | {:14.2}  |", sum);
+    println!(
+        "-------------------------------------------------------------------------------------------------------"
+    );
+}
+
+fn find_price_info<'a>(coin: &str, prices: &'a Vec<PriceInfo>, currency: &Currency) -> Option<&'a PriceInfo> {
+    prices
+        .iter()
+        .find(|price| price.coin == coin && price.currency == *currency)
+        //.map(|price| price.value)
+}
+
+pub fn list_wallets(wallets_data: &WalletsData) -> Vec<ListWalletLine> {
+    
+    let mut wallets = Vec::new();
+    
+    for wallet in wallets_data.wallets.iter() {
+        let line = ListWalletLine {
+            wallet_name: wallet.name.clone(),
+            wallet_kind: wallet.kind.clone(),
+            wallet_address: wallet.address.clone(),
+        };
+        wallets.push(line);
+    }
+
+    wallets
+
+}
+
+pub fn write_wallets_report(report_lines: &Vec<ListWalletLine>) {
+    println!(
+        "-----------------------------------------------------------------------------------------------"
+    );
+    println!(
+        "{:32} | {:32} | {:64}",
+        "Wallet",
+        "Kind",
+        "Address"
+    );
+    println!(
+        "-----------------------------------------------------------------------------------------------"
+    );
+
+    for line in report_lines {
+        println!(
+            "{:32} | {:32} | {:64}",
+            line.wallet_name,
+            line.wallet_kind,
             line.wallet_address
         );
     }
@@ -187,16 +257,7 @@ pub fn write_report(report_lines: &Vec<ReportLine>) {
     println!(
         "---------------------------------------------------------------------------------------------"
     );
-    println!("Amount  | {:12.4}  |", amount);
-    println!("Sum     | {:12.4}  |", sum);
     println!(
         "-----------------------------------------------------------------------------------------------"
     );
-}
-
-fn find_price(coin: &str, prices: &Vec<PriceInfo>, currency: &Currency) -> Option<f64> {
-    prices
-        .into_iter()
-        .find(|price| price.coin == coin && price.currency == *currency)
-        .map(|price| price.value)
 }

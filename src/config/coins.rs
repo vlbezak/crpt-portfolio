@@ -15,9 +15,12 @@ pub struct CoinDef {
     pub code: String,
     #[serde(default)]
     pub price_provider: PriceProviderEnum,
-    //pub all_time_high_provider: Provider,
     #[serde(default)]
     pub price_provider_data: Option<HashMap<String, String>>,
+    #[serde(default)]
+    pub ath_provider: AthProviderEnum,
+    #[serde(default)]
+    pub ath_provider_data: Option<HashMap<String, String>>,
 }
 
 #[derive(Debug, Deserialize, Eq, PartialEq, Hash, Clone)]
@@ -29,9 +32,21 @@ pub enum PriceProviderEnum {
     // Add more providers here if needed
 }
 
+#[derive(Debug, Deserialize, Eq, PartialEq, Hash, Clone)]
+#[serde(rename_all = "PascalCase")]
+pub enum AthProviderEnum {
+    CoinGecko
+}
+
 impl Default for PriceProviderEnum {
     fn default() -> Self {
-        PriceProviderEnum::CoinAPI
+        PriceProviderEnum::CryptoCompare
+    }
+}
+
+impl Default for AthProviderEnum {
+    fn default() -> Self {
+        AthProviderEnum::CoinGecko
     }
 }
 

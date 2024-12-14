@@ -29,7 +29,7 @@
         },
         {
             "name": "Ethereum MetaMask 1",
-            "kind": "Ethereum MetaMask 1",
+            "kind": "MetaMask",
             "address": "Ethereum MetaMask 1",
             "holdings": [
                 { "coin": "TRAC", "amount": 831.733 },
@@ -37,7 +37,7 @@
                 { "coin": "ETH", "amount": 0.7846 },
                 { "coin": "MKR", "amount": 0.07 },
                 { "coin": "PRQ", "amount": 340 },
-                { "coin": "AMPL", "amount": 650 },
+                { "coin": "AMPL", "amount": 936 },
                 { "coin": "DAI", "amount": 19.5 },
                 { "coin": "USDC", "amount": 336.94715 },
                 { "coin": "API3", "amount": 50.99928 },    
@@ -47,6 +47,9 @@
                 { "coin": "RAMP", "amount": 548.7547 },    
                 { "coin": "POLS", "amount":  80.431 },    
                 { "coin": "SWAP", "amount": 249.4771 },    
+                { "coin": "WISE", "amount": 1540.959 },    
+                { "coin": "DIA", "amount": 40.0795 },    
+                { "coin": "KP3R", "amount": 0.261 },    
                 { "coin": "PHA", "amount": 596.54321 }         
             ]
         },
@@ -160,7 +163,7 @@
             "kind": "Acala",
             "address": "Acala",
             "holdings": [
-                { "coin": "DOT", "amount": 727 }
+                { "coin": "DOT", "amount": 733 }
             ]
         },
         {
@@ -168,7 +171,7 @@
             "kind": "DOT Staking",
             "address": "DOT Staking",
             "holdings": [
-                { "coin": "DOT", "amount": 508 }
+                { "coin": "DOT", "amount": 513 }
             ]
         },
         {
@@ -277,9 +280,19 @@
             "holdings": [
                 { "coin": "AVAX", "amount": 1.49 },
                 { "coin": "BCH", "amount": 1.21 },
+                { "coin": "XMR", "amount": 0.17 },
+                { "coin": "AMPL", "amount": 60.37 },
                 { "coin": "EGLD", "amount": 0.25 },
                 { "coin": "EOS", "amount": 7.4 },
                 { "coin": "TRX", "amount": 547.5 },
+                { "coin": "BTC", "amount": 0.007 },
+                { "coin": "DOT", "amount": 44 },
+                { "coin": "USD", "amount": 503 },
+                { "coin": "USDT", "amount": 33.82 },
+                { "coin": "ETH", "amount": 0.1 },
+                { "coin": "FTM", "amount": 44.95 },
+                { "coin": "ETHW", "amount": 0.1 },
+                { "coin": "LTC", "amount": 0.0066 },
                 { "coin": "LEO", "amount": 5.99 }
             ]
         },
@@ -288,9 +301,10 @@
             "kind": "Coinbase",
             "address": "Coinbase",
             "holdings": [
-                { "coin": "BTC", "amount": 0.05684 },
+                { "coin": "BTC", "amount": 0.05894 },
                 { "coin": "ETH", "amount": 0.8494 },
-                { "coin": "XLM", "amount": 31.33 }
+                { "coin": "XLM", "amount": 31.33 },
+                { "coin": "COMP", "amount": 0.026 }
             ]
         }
     ]

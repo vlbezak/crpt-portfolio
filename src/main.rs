@@ -3,7 +3,7 @@ use std::str::FromStr;
 use config::wallets;
 use dotenv::dotenv;
 use model::{ Currency, ReportOrder, ReportSortBy };
-use service::{ report_holdings, write_report, ReportFilter };
+use service::{ list_wallets, report_holdings, write_report, write_wallets_report, ReportFilter };
 
 pub type Result<T> = core::result::Result<T, Error>;
 type Error = Box<dyn std::error::Error>;
@@ -125,7 +125,9 @@ async fn handle_holdings(command: &Commands) -> Result<()> {
 
 async fn handle_list_wallets(command: &Commands) -> Result<()> {
     if let Commands::ListWallets { wallet_names: _ } = command {
-        todo!("Not implemented");
+        let wallets = wallets::read_default_wallets_config()?;
+        let wallet_lines = list_wallets(&wallets);
+        write_wallets_report(&wallet_lines);
     }
 
     Ok(())

@@ -48,7 +48,14 @@ pub struct PriceInfo {
     pub coin: String,
     pub currency: Currency,
     pub value: f64,
+    pub market_cap: f64,
 }
+
+
+pub struct AthInfo {
+    pub ath: f64,
+}
+
 
 #[derive(Debug, ValueEnum, Clone)]
 pub enum ReportSortBy {
@@ -62,3 +69,5 @@ pub enum ReportOrder {
     Asc,
     Desc,
 }
+
+

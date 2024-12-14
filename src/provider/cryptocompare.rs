@@ -1,11 +1,11 @@
 use async_trait::async_trait;
 
 use crate::{
-    client::{ cryptocompare::{ CryptoCompareClient, PriceMultiFullResponse } },
+    client::cryptocompare::{ CryptoCompareClient, PriceMultiFullResponse },
     config::coins::CoinDef,
     model::{ Currency, PriceInfo },
 };
-use crate::{ Result };
+use crate::Result;
 
 use std::str::FromStr;
 
@@ -13,7 +13,7 @@ use super::PriceProvider;
 
 pub struct CryptoComparePriceProvider {}
 
-const MAX_SYMBOLS_LEN: usize = 100;
+const MAX_SYMBOLS_LEN: usize = 200;
 const SYMBOLS_TOLLERANCE: usize = 10;
 
 #[async_trait]
@@ -40,8 +40,8 @@ impl PriceProvider for CryptoComparePriceProvider {
     ) -> Result<Vec<PriceInfo>> {
 
         println!("CryptoCompare: get_prices:");
-        println!("Coins: {:#?}", coins_definitions);
-        println!("Currencies: {:#?}", currencies);
+        println!("Coins: {:?}", coins_definitions.len());
+        println!("Currencies: {:?}", currencies);
 
         let mut result = Vec::new();
 
@@ -115,6 +115,7 @@ fn convert_response(response: &PriceMultiFullResponse) -> Result<Vec<PriceInfo>>
                 coin: symbol.to_string(),
                 currency: Currency::from_str(curr)?,
                 value: level2.price,
+                market_cap: level2.mktcap,
             };
             result_prices.push(price_info);
         }

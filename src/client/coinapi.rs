@@ -51,6 +51,7 @@ impl CurrentPriceApi for CoinAPIClient {
             coin: String::from(symbol),
             currency: Currency::USD,
             value: val.rate,
+            market_cap: 0.0,
         });
 
         Ok(prices)
