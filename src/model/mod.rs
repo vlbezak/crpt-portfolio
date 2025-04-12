@@ -49,11 +49,20 @@ pub struct PriceInfo {
     pub currency: Currency,
     pub value: f64,
     pub market_cap: f64,
+    pub change_24h: f64,
 }
 
 
+#[derive(Debug, Serialize, Deserialize)]
 pub struct AthInfo {
+    pub coin : String,
     pub ath: f64,
+    pub ath_date: String,
+    pub ath_change_percentage: f64,
+    pub atl: f64,
+    pub atl_date: String,
+    pub atl_change_percentage: f64,
+
 }
 
 
@@ -62,6 +71,8 @@ pub enum ReportSortBy {
     Token,
     Amount,
     Value,
+    MktCap,
+    Change24h,
 }
 
 #[derive(Debug, ValueEnum, Clone, PartialEq)]

@@ -1,10 +1,16 @@
 use std::collections::HashMap;
+use colored::*;
+use report::{colored_change_percent, readable_mkt_cap};
 
 use crate::{
     config::wallets::WalletsData,
     model::{ Currency, PriceInfo, ReportOrder, ReportSortBy },
 };
 use ordered_float::OrderedFloat;
+
+
+
+mod report;
 
 #[derive(Debug)]
 pub struct ReportFilter {
@@ -62,6 +68,7 @@ pub struct ReportLine {
     amount: f64,
     value: f64,
     mkt_cap: f64,
+    change_24h: f64,
     wallet_name: String,
     #[allow(unused)]
     wallet_kind: String,
@@ -115,6 +122,7 @@ pub fn report_holdings(
                 amount: holding.amount,
                 value: val_of_coin,
                 mkt_cap: price_info.market_cap,
+                change_24h: price_info.change_24h,
                 wallet_name: wallet.name.clone(),
                 wallet_kind: wallet.kind.clone(),
                 wallet_address: wallet.address.clone(),
@@ -129,6 +137,8 @@ pub fn report_holdings(
     match filter.sort_by {
         ReportSortBy::Value => { report_lines.sort_by_key(|line| OrderedFloat(line.value)) },
         ReportSortBy::Amount => { report_lines.sort_by_key(|line| OrderedFloat(line.amount)) },
+        ReportSortBy::MktCap => { report_lines.sort_by_key(|line| OrderedFloat(line.mkt_cap)) },
+        ReportSortBy::Change24h => { report_lines.sort_by_key(|line| OrderedFloat(line.change_24h)) },
         ReportSortBy::Token => { report_lines.sort_by(|a,b| a.token.cmp(&b.token)) },
     }
 
@@ -140,22 +150,24 @@ pub fn report_holdings(
 }
 
 fn group_by_token(report_lines: &Vec<ReportLine>) -> Vec<ReportLine> {
-    let mut grouped: HashMap<String, (f64, f64, f64)> = HashMap::new();
+    let mut grouped: HashMap<String, (f64, f64, f64, f64)> = HashMap::new();
 
     for line in report_lines {
-        let entry = grouped.entry(line.token.clone()).or_insert((0.0, 0.0, 0.0));
+        let entry = grouped.entry(line.token.clone()).or_insert((0.0, 0.0, 0.0, 0.0));
         entry.0 += line.amount;
         entry.1 += line.value;
         entry.2 = line.mkt_cap;
+        entry.3 = line.change_24h;
     }
 
     grouped
         .into_iter()
-        .map(|(token, (total_amount, total_value, mkt_cap))| ReportLine {
+        .map(|(token, (total_amount, total_value, mkt_cap, change_24h))| ReportLine {
             token,
             amount: total_amount,
             value: total_value,
             mkt_cap,
+            change_24h,
             wallet_name: "-".to_string(),
             wallet_kind: "-".to_string(),
             wallet_address: "-".to_string(),
@@ -168,11 +180,12 @@ pub fn write_report(report_lines: &Vec<ReportLine>) {
         "-------------------------------------------------------------------------------------------------------"
     );
     println!(
-        "{:8}|{:14.6} | {:12.2} | {:22.2} | {:32} | {:32}",
+        "{:8}| {:14} | {:12} | {:10} | {:10} | {:20} | {:32}",
         "Token",
         "Amount",
         "Value",
         "Mkt.Cap",
+        "24H %",
         "Wallet",
         "Address"
     );
@@ -187,11 +200,12 @@ pub fn write_report(report_lines: &Vec<ReportLine>) {
         amount += line.amount;
 
         println!(
-            "{:8}|{:14.6} | {:12.2} | {:22.2} | {:32} | {:32}",
+            "{:8}| {:14.6} | {:12.2} | {:10} | {:10} | {:20} | {:32}",
             line.token,
             line.amount,
             line.value,
-            line.mkt_cap,
+            readable_mkt_cap(line.mkt_cap),
+            colored_change_percent(line.change_24h),
             line.wallet_name,
             line.wallet_address
         );
@@ -200,8 +214,8 @@ pub fn write_report(report_lines: &Vec<ReportLine>) {
     println!(
         "-----------------------------------------------------------------------------------------------------"
     );
-    println!("Amount  | {:14.6}  |", amount);
-    println!("Sum     | {:14.2}  |", sum);
+    println!("Amount  | {:14.6} |", amount);
+    println!("Sum     | {:14.2} |", sum);
     println!(
         "-------------------------------------------------------------------------------------------------------"
     );

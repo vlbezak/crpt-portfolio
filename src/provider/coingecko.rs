@@ -33,8 +33,15 @@ impl AthProvider for CoinGeckoAthProvider {
 
         for record in market_data.iter() {
             let ath_info = AthInfo {
+                coin: symbol.to_string(),
                 ath: record.ath,
+                ath_change_percentage: record.ath_change_percentage,
+                ath_date: record.ath_date.clone(),
+                atl: record.atl,
+                atl_change_percentage: record.atl_change_percentage,    
+                atl_date: record.atl_date.clone(),
             };
+            result.push(ath_info);
         }
 
         Ok(result)

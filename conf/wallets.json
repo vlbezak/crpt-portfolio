@@ -37,7 +37,7 @@
                 { "coin": "ETH", "amount": 0.7846 },
                 { "coin": "MKR", "amount": 0.07 },
                 { "coin": "PRQ", "amount": 340 },
-                { "coin": "AMPL", "amount": 936 },
+                { "coin": "AMPL", "amount": 965 },
                 { "coin": "DAI", "amount": 19.5 },
                 { "coin": "USDC", "amount": 336.94715 },
                 { "coin": "API3", "amount": 50.99928 },    
@@ -112,7 +112,7 @@
             "kind": "Ledger",
             "address": "Ledger",
             "holdings": [
-                { "coin": "XRP", "amount": 18918 },
+                { "coin": "XRP", "amount": 16980 },
                 { "coin": "BTC", "amount": 0.515727 },
                 { "coin": "USDT", "amount": 4096.45 },
                 { "coin": "LINK", "amount": 129.679 },
@@ -139,7 +139,7 @@
             "kind": "Ledger",
             "address": "Ledger-eth-lido",
             "holdings": [
-                { "coin": "ETH", "amount": 5.080709 }
+                { "coin": "ETH", "amount": 5.0919 }
             ]
         },
         {
@@ -147,7 +147,7 @@
             "kind": "Ledger",
             "address": "Ledger-eth-kiln",
             "holdings": [
-                { "coin": "ETH", "amount": 5.080709 }
+                { "coin": "ETH", "amount": 5.112809 }
             ]
         },
         {
@@ -224,13 +224,12 @@
                 { "coin": "LTC", "amount": 2 },
                 { "coin": "ETC", "amount": 2.6 },
                 { "coin": "OCEAN", "amount": 120 },
-                { "coin": "CXT", "amount": 700 },
                 { "coin": "KILT", "amount": 160 },
                 { "coin": "SAND", "amount": 50 },
                 { "coin": "CHZ", "amount": 210 },
                 { "coin": "ETHW", "amount": 3.22 },
-                { "coin": "CQT", "amount": 700 },
-                { "coin": "XRP", "amount": 2020.4 },
+                { "coin": "CXT", "amount": 700 },
+                { "coin": "XRP", "amount": 80 },
                 { "coin": "TRX", "amount": 206 }
             ]
         },
@@ -281,7 +280,7 @@
                 { "coin": "AVAX", "amount": 1.49 },
                 { "coin": "BCH", "amount": 1.21 },
                 { "coin": "XMR", "amount": 0.17 },
-                { "coin": "AMPL", "amount": 60.37 },
+                { "coin": "AMPL", "amount": 70.54 },
                 { "coin": "EGLD", "amount": 0.25 },
                 { "coin": "EOS", "amount": 7.4 },
                 { "coin": "TRX", "amount": 547.5 },

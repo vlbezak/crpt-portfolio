@@ -7,7 +7,7 @@ use crate::provider::get_price_provider;
 use crate::Result;
 use crate::coins::filestore::CoinPriceFileStore;
 
-pub async fn update_coins_prices(currencies: &Vec<Currency>) -> Result<Vec<PriceInfo>> {
+pub async fn update_coins_prices(currencies: &Vec<Currency>) -> Result<()> {
     let coin_price_store = CoinPriceFileStore {
         dir_name: String::from("data"),
     };
@@ -19,7 +19,7 @@ pub async fn update_coins_prices(currencies: &Vec<Currency>) -> Result<Vec<Price
 
     println!("Storing prices: {}", price_info.len());
     coin_price_store.write_prices(&price_info)?;
-    Ok(Vec::new())
+    Ok(())
 }
 
 async fn get_coins_prices_for_coins_data(coins_data: &CoinsData, currencies: &Vec<Currency>) -> Result<Vec<PriceInfo>> {

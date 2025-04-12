@@ -52,6 +52,7 @@ impl CurrentPriceApi for CoinAPIClient {
             currency: Currency::USD,
             value: val.rate,
             market_cap: 0.0,
+            change_24h: 0.0,
         });
 
         Ok(prices)

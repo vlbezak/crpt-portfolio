@@ -1,15 +1,15 @@
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-use crate::Result;
+use crate::{client::coingecko::Coin, Result};
 
 use super::read_json_config;
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct CoinsData {
     pub coins: Vec<CoinDef>,
 }
 
-#[derive(Debug, Deserialize, Clone)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct CoinDef {
     pub code: String,
@@ -23,7 +23,7 @@ pub struct CoinDef {
     pub ath_provider_data: Option<HashMap<String, String>>,
 }
 
-#[derive(Debug, Deserialize, Eq, PartialEq, Hash, Clone)]
+#[derive(Debug, Deserialize, Serialize, Eq, PartialEq, Hash, Clone)]
 #[serde(rename_all = "PascalCase")]
 pub enum PriceProviderEnum {
     CoinAPI,
@@ -32,7 +32,7 @@ pub enum PriceProviderEnum {
     // Add more providers here if needed
 }
 
-#[derive(Debug, Deserialize, Eq, PartialEq, Hash, Clone)]
+#[derive(Debug, Deserialize, Serialize, Eq, PartialEq, Hash, Clone)]
 #[serde(rename_all = "PascalCase")]
 pub enum AthProviderEnum {
     CoinGecko
@@ -52,4 +52,10 @@ impl Default for AthProviderEnum {
 
 pub fn read_default_coins_config() -> Result<CoinsData> {
     Ok(read_json_config("conf/coins.json")?)
+}
+
+impl CoinsData {
+    pub fn get_coin_def(&self, code: &str) -> Option<&CoinDef> {
+        self.coins.iter().find(|coin_def| coin_def.code == code)
+    }
 }

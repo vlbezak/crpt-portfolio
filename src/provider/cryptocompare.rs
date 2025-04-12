@@ -115,7 +115,8 @@ fn convert_response(response: &PriceMultiFullResponse) -> Result<Vec<PriceInfo>>
                 coin: symbol.to_string(),
                 currency: Currency::from_str(curr)?,
                 value: level2.price,
-                market_cap: level2.mktcap,
+                market_cap: level2.circulating_supply_mktcap,
+                change_24h: level2.change_pct_24_hour,
             };
             result_prices.push(price_info);
         }

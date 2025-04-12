@@ -1,8 +1,11 @@
 use std::str::FromStr;
 
+use client::coingecko::{Coin, CoinGeckoClient};
+
 use config::wallets;
 use dotenv::dotenv;
 use model::{ Currency, ReportOrder, ReportSortBy };
+use serde_json::to_writer_pretty;
 use service::{ list_wallets, report_holdings, write_report, write_wallets_report, ReportFilter };
 
 pub type Result<T> = core::result::Result<T, Error>;
@@ -14,8 +17,10 @@ mod service;
 mod coins;
 mod config;
 mod provider;
+mod utils;
 
 use clap::{ Parser, Subcommand };
+use utils::coin_list;
 
 /// Simple portfolio viewer
 #[derive(Parser, Debug)]
@@ -27,7 +32,7 @@ struct Cli {
 
 #[derive(Subcommand, Debug)]
 enum Commands {
-    // Report holdings for wallet or token
+    /// Report holdings for wallet or token
     Holdings {
         /// Name of the token in uppercase - for example ETH, BTC
         #[arg(short, long)]
@@ -69,8 +74,18 @@ enum Commands {
         wallet_names: bool,
     },
 
-    // Update prices
+    /// Update all time data like ATH, ATL ... This might take a while
+    UpdateAllTimeData {
+        /// Name of the token in uppercase - for example ETH, BTC
+        #[arg(short, long)]
+        token: Option<String>,
+    },
+
+    /// Update actual prices for all coins
     UpdatePrices {},
+
+    /// Update coins data with downloaded data from CoinGecko which is stored in data/list.json
+    UpdateCoinsWithList {},
 }
 
 #[tokio::main]
@@ -83,10 +98,14 @@ async fn main() -> Result<()> {
         Commands::Holdings { .. } => handle_holdings(&cli.command).await?,
         Commands::ListWallets { .. } => handle_list_wallets(&cli.command).await?,
         Commands::UpdatePrices { .. } => update_prices(&cli.command).await?,
+        Commands::UpdateAllTimeData { .. } => update_all_time_data(&cli.command).await?,
+        Commands::UpdateCoinsWithList { .. } => update_coins_with_list(&cli.command).await?,
     }
 
     Ok(())
 }
+
+
 
 async fn handle_holdings(command: &Commands) -> Result<()> {
     if
@@ -134,16 +153,45 @@ async fn handle_list_wallets(command: &Commands) -> Result<()> {
 }
 
 async fn update_prices(command: &Commands) -> Result<()> {
- 
     if let Commands::UpdatePrices { .. } = command {
         let mut currencies = Vec::new();
 
         currencies.push(Currency::from_str("USD")?);
-        currencies.push(Currency::from_str("EUR")?);    
+        currencies.push(Currency::from_str("EUR")?);
 
         coins::update_prices::update_coins_prices(&currencies).await?;
-
     }
 
     Ok(())
 }
+
+async fn update_all_time_data(command: &Commands) -> Result<()> {
+    if let Commands::UpdateAllTimeData { token } = command {
+        println!("Updating all time data for {:?}", token);
+
+        let mut currencies = Vec::new();
+        currencies.push(Currency::from_str("USD")?);
+
+        if token.is_some() {
+            coins::update_ath::update_ath_data_for_token(token.as_ref().unwrap(), &currencies).await?;
+            return Ok(());
+        }
+        else {
+            coins::update_ath::update_ath_data_for_all_tokens(&currencies).await?;
+            return Ok(());
+        }
+    }
+
+    Ok(())
+}
+
+
+async fn update_coins_with_list(command: &Commands) -> Result<()> {
+    if let Commands::UpdateCoinsWithList { } = command {
+        println!("Updating coins data with list from coin gecko");
+        //coin_list::update_coins_with_list_file()?;
+    }
+
+    Ok(())
+}
+

@@ -1,13 +1,17 @@
+use chrono::Local;
 use filestore::CoinPriceFileStore;
 
-use crate::model::PriceInfo;
+use crate::model::{AthInfo, PriceInfo};
 use crate::provider::get_price_provider;
 use crate::service::ReportFilter;
 use crate::Result;
 use crate::config::coins::{ read_default_coins_config, CoinsData };
 
-mod filestore;
+pub(crate) mod filestore;
 pub mod update_prices;
+pub(crate) mod update_ath;
+
+use std::fs::{ File };
 
 //:TODO - asi by sme mali ignorovat filter, lebo potom sa nevratia vsetky coins
 pub async fn get_coins_prices(filter: &ReportFilter) -> Result<Vec<PriceInfo>> {
@@ -67,3 +71,10 @@ trait CoinPriceStore {
     fn write_prices(&self, prices: &Vec<PriceInfo>) -> Result<String>;
     fn read_latest_prices(&self) -> Result<Option<Vec<PriceInfo>>>;
 }
+
+trait DataStore<T> {
+    fn write_data(&self, data: &T ) -> Result<Vec<String>>;
+    fn read_last_data_for_coin(&self, coin: &str) -> Result<Option<T>>;
+    fn read_last_data_all(&self) -> Result<Option<T>>;
+}
+

@@ -22,6 +22,9 @@ pub struct Level2 {
     pub mktcap: f64,
     #[serde(rename = "CIRCULATINGSUPPLYMKTCAP")]
     pub circulating_supply_mktcap: f64,
+    #[serde(rename = "CHANGEPCT24HOUR")]
+    pub change_pct_24_hour: f64,
+
 }
 
 pub struct CryptoCompareClient {}
@@ -71,7 +74,7 @@ impl CryptoCompareClient {
 
         let raw_text = response.text().await?;
         //println!("Raw response: {}", raw_text);
-
+        
         let result: PriceMultiFullResponse = serde_json::from_str(&raw_text)?;
 
         //println!("{:#?}", result);
